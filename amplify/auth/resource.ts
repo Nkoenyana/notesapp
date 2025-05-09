@@ -5,8 +5,8 @@ export const auth = defineAuth({
     email: true,
     externalProviders: {
       google: {
-        clientId: secret('679239044988-4i0htcjm6baa6kicpj6iqgn1jvlsr9m1.apps.googleusercontent.com'),
-        clientSecret: secret('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'),
+        clientId: secret('gg_id'),
+        clientSecret: secret('gg_client'),
                 
         attributeMapping: {
           email: 'email'
