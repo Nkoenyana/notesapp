@@ -89,7 +89,7 @@ export default function App() {
   }
 
   return (
-    <Authenticator>
+    <Authenticator socialProviders={['amazon', 'apple', 'facebook', 'google']}>
       {({ signOut }) => (
         <Flex
           className="App"
