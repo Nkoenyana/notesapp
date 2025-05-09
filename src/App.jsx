@@ -17,6 +17,8 @@ import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../amplify_outputs.json";
+import { signInWithRedirect } from "aws-amplify/auth";
+signInWithRedirect({ provider: "Google" })
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
@@ -89,7 +91,7 @@ export default function App() {
   }
 
   return (
-    <Authenticator socialProviders={['amazon', 'apple', 'facebook', 'google']}>
+    <Authenticator socialProviders={['google']}>
       {({ signOut }) => (
         <Flex
           className="App"

@@ -13,10 +13,10 @@ export const auth = defineAuth({
         }
       },
       callbackUrls: [
-        'http://localhost:3000/profile',
+        'http://localhost:5173/profile',
         'https://mywebsite.com/profile'
       ],
-      logoutUrls: ['http://localhost:3000/', 'https://mywebsite.com'],
+      logoutUrls: ['http://localhost:5173/', 'https://mywebsite.com'],
     }
   }
 });
