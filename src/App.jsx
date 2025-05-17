@@ -23,6 +23,8 @@ import "./App.css"
 import { TbCopyPlus } from "react-icons/tb";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { PiFilePlusBold } from "react-icons/pi";
+import Badge from 'react-bootstrap/Badge';
+import { PiCalendarStarDuotone } from "react-icons/pi";
 // import { CuteNav } from "./components/navbar";
 signInWithRedirect({ provider: "Google" })
 /**
@@ -58,7 +60,14 @@ export default function App() {
     console.log(notes);
     setNotes(notes);
   }
+  function formatDate(date) {
+    date = new Date(date)
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+    const year = date.getFullYear();
 
+    return `${day}-${month}-${year}`;
+  }
   async function createNote(event) {
     event.preventDefault();
     const form = new FormData(event.target);
@@ -110,44 +119,44 @@ export default function App() {
           <Heading level={1}>My Notes App</Heading>
           <Popup trigger={<Button>
             <TbCopyPlus />
-          </Button>} position={"center center"} 
+          </Button>} position={"center center"}
           >
             <View as="form" margin="3rem 0" onSubmit={createNote} className="new-note">
-            <Flex
-              direction="column"
-              justifyContent="center"
-              gap="2rem"
-              padding="2rem"
-            >
-              <TextField
-                name="name"
-                placeholder="Note Name"
-                label="Note Name"
-                labelHidden
-                variation="quiet"
-                required
-              />
-              <TextField
-                name="description"
-                placeholder="Note Description"
-                label="Note Description"
-                labelHidden
-                variation="quiet"
-                required
-              />
-              <View
-                name="image"
-                as="input"
-                type="file"
-                alignSelf={"end"}
-                accept="image/png, image/jpeg"
-              />
+              <Flex
+                direction="column"
+                justifyContent="center"
+                gap="2rem"
+                padding="2rem"
+              >
+                <TextField
+                  name="name"
+                  placeholder="Note Name"
+                  label="Note Name"
+                  labelHidden
+                  variation="quiet"
+                  required
+                />
+                <TextField
+                  name="description"
+                  placeholder="Note Description"
+                  label="Note Description"
+                  labelHidden
+                  variation="quiet"
+                  required
+                />
+                <View
+                  name="image"
+                  as="input"
+                  type="file"
+                  alignSelf={"end"}
+                  accept="image/png, image/jpeg"
+                />
 
-              <Button type="submit" variation="primary">
-                <PiFilePlusBold />
-              </Button>
-            </Flex>
-          </View>
+                <Button type="submit" variation="primary">
+                  <PiFilePlusBold />
+                </Button>
+              </Flex>
+            </View>
           </Popup>
           <Divider />
           <Heading level={2}>Current Notes</Heading>
@@ -172,6 +181,10 @@ export default function App() {
               >
                 <View>
                   <Heading level="3">{note.name}</Heading>
+                </View>
+                <View>
+
+                  <Text><PiCalendarStarDuotone />{formatDate(note.createdAt)}</Text>
                 </View>
                 <Text fontStyle="italic">{note.description}</Text>
                 {note.image && (
