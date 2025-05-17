@@ -8,11 +8,14 @@ export const auth = defineAuth({
         clientId: secret('gg_id'),
         clientSecret: secret('gg_client'),
                 
-       
+        attributeMapping: {
+          email: 'email'
+        },
+        scopes: ['email']
       },
       callbackUrls: [
-        'http://localhost:5173',
-        'https://main.d10ods65dn82zv.amplifyapp.com'
+        'http://localhost:5173/',
+        'https://main.d10ods65dn82zv.amplifyapp.com/'
       ],
       logoutUrls: ['http://localhost:5173/', 'https://main.d10ods65dn82zv.amplifyapp.com/'],
     }
