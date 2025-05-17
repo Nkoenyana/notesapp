@@ -18,6 +18,12 @@ import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
 import outputs from "../amplify_outputs.json";
 import { signInWithRedirect } from "aws-amplify/auth";
+import Popup from "reactjs-popup"
+import "./App.css"
+import { TbCopyPlus } from "react-icons/tb";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { PiFilePlusBold } from "react-icons/pi";
+// import { CuteNav } from "./components/navbar";
 signInWithRedirect({ provider: "Google" })
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
@@ -89,7 +95,6 @@ export default function App() {
 
     fetchNotes();
   }
-
   return (
     <Authenticator socialProviders={['google']}>
       {({ signOut }) => (
@@ -101,8 +106,13 @@ export default function App() {
           width="70%"
           margin="0 auto"
         >
+          {/* <CuteNav /> */}
           <Heading level={1}>My Notes App</Heading>
-          <View as="form" margin="3rem 0" onSubmit={createNote}>
+          <Popup trigger={<Button>
+            <TbCopyPlus />
+          </Button>} position={"center center"} 
+          >
+            <View as="form" margin="3rem 0" onSubmit={createNote} className="new-note">
             <Flex
               direction="column"
               justifyContent="center"
@@ -134,10 +144,11 @@ export default function App() {
               />
 
               <Button type="submit" variation="primary">
-                Create Note
+                <PiFilePlusBold />
               </Button>
             </Flex>
           </View>
+          </Popup>
           <Divider />
           <Heading level={2}>Current Notes</Heading>
           <Grid
@@ -174,7 +185,7 @@ export default function App() {
                   variation="destructive"
                   onClick={() => deleteNote(note)}
                 >
-                  Delete note
+                  <RiDeleteBin2Fill />
                 </Button>
               </Flex>
             ))}

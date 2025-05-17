@@ -8,9 +8,9 @@ export const auth = defineAuth({
         clientId: secret('gg_id'),
         clientSecret: secret('gg_client'),
                 
-        // attributeMapping: {
-        //   email: 'email'
-        // }
+        attributeMapping: {
+          email: 'email'
+        }
       },
       callbackUrls: [
         'http://localhost:5173/profile',
