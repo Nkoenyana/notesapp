@@ -14,7 +14,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import Popup from "reactjs-popup"
-import "./App.css"
+import "~css/App.css"
 import { TbCopyPlus } from "react-icons/tb";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { PiFilePlusBold } from "react-icons/pi";
