@@ -20,10 +20,25 @@ import { RiDeleteBin2Fill } from "react-icons/ri";
 import { PiFilePlusBold } from "react-icons/pi";
 import Badge from 'react-bootstrap/Badge';
 import { PiCalendarStarDuotone } from "react-icons/pi";
+import { asiaformatDate } from "~utils/datetimeFormat";
+import { Amplify } from "aws-amplify";
+import amplifyOutputs from "amplify-json";
+import { generateClient } from "aws-amplify/data";
+import {toast} from "react-toastify";
+
+import {ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+Amplify.configure(amplifyOutputs);
+
+const client  = generateClient({
+  authMode: "userPool"
+});
 /**
- * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
+ * @type {import('aws-amplify/data').Client<import('~/amplify/data/resource').Schema>}
  */
-export default function homeage() {
+
+export default function Homepage() {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
@@ -47,14 +62,7 @@ export default function homeage() {
     console.log(notes);
     setNotes(notes);
   }
-  function formatDate(date) {
-    date = new Date(date)
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
-    const year = date.getFullYear();
 
-    return `${day}-${month}-${year}`;
-  }
   async function createNote(event) {
     event.preventDefault();
     const form = new FormData(event.target);
@@ -64,6 +72,28 @@ export default function homeage() {
       name: form.get("name"),
       description: form.get("description"),
       image: form.get("image").name,
+    }).then((response) => {
+      toast.success("Note created successfully!", {
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      console.log("Note created successfully:", response);
+
+    }).catch((error) => {
+      toast.error("Error creating note: " + error.message, {
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      console.error("Error creating note:", error);
+
     });
 
     console.log(newNote);
@@ -71,7 +101,6 @@ export default function homeage() {
       if (newNote.image)
         await uploadData({
           path: ({ identityId }) => `media/${identityId}/${newNote.image}`,
-
           data: form.get("image"),
         }).result;
 
@@ -100,6 +129,17 @@ export default function homeage() {
           width="70%"
           margin="0 auto"
         >
+
+          <ToastContainer 
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           {/* <CuteNav /> */}
           <Heading level={1}>My Notes App</Heading>
           <Popup trigger={<Button>
@@ -169,7 +209,7 @@ export default function homeage() {
                 </View>
                 <View>
 
-                  <Text><PiCalendarStarDuotone />{formatDate(note.createdAt)}</Text>
+                  <Text><PiCalendarStarDuotone />{asiaformatDate(note.createdAt)}</Text>
                 </View>
                 <Text fontStyle="italic">{note.description}</Text>
                 {note.image && (

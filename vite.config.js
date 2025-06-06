@@ -9,6 +9,10 @@ export default defineConfig({
       '~': '/src',
       '~components': '/src/components',
       '~css': '/src/css',
+      '~pages': '/src/pages',
+      'amplify-json': '/amplify_outputs.json',
+      "~utils": '/src/utils',
+      "~amplify": '/amplify',
     },
   },
 })

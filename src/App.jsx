@@ -1,16 +1,15 @@
 import { signInWithRedirect } from "aws-amplify/auth";
 import { Authenticator } from "@aws-amplify/ui-react";
-import { Amplify } from "aws-amplify";
-import outputs from "../amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
-import Homepage from "./home.jsx";
+import Homepage from "~pages/home.jsx";
 import { Routes, Route } from "react-router-dom";
+import NotFound from "~pages/code/404.jsx";
 signInWithRedirect({ provider: "Google" });
+import { client } from "~utils/amplify";
 /**
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
 
-Amplify.configure(outputs);
 
 export default function App() {
   return (
@@ -18,12 +17,12 @@ export default function App() {
       {({ signOut }) => (
           <Routes>
             <Route
-              path="/home"
+              path="/"
               element={<Homepage />}
             />
             <Route
               path="*"
-              element={<div>Page Not Found</div>}
+              element={<NotFound />}
               cache="no-store"
             />
           </Routes>
