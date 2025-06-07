@@ -7,7 +7,6 @@ export const auth = defineAuth({
       google: {
         clientId: secret('gg_id'),
         clientSecret: secret('gg_client'),
-                
         attributeMapping: {
           email: 'email'
         },
