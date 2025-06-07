@@ -1,0 +1,287 @@
+.small-team-discussing-ideas-21-icon {
+  	position: absolute;
+  	top: calc(50% - 325px);
+  	left: 676px;
+  	width: 827px;
+  	height: 650px;
+  	overflow: hidden;
+}
+.sign-in {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 114.8px;
+  	height: 92.1px;
+}
+.if-you-dont {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	display: inline-block;
+  	width: 357.3px;
+  	height: 24.6px;
+}
+.you-can {
+  	white-space: pre-wrap;
+}
+.register-here {
+  	font-weight: 600;
+  	color: #0c21c1;
+}
+.you-can-register-container {
+  	position: absolute;
+  	top: 30.7px;
+  	left: 0px;
+  	display: inline-block;
+  	width: 357.3px;
+  	height: 24.6px;
+}
+.if-you-dont-have-an-account-r-parent {
+  	position: absolute;
+  	top: 68.57px;
+  	left: 0px;
+  	width: 357.3px;
+  	height: 55.3px;
+  	font-size: 16px;
+}
+.sign-in-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 2.32px;
+  	width: 357.3px;
+  	height: 123.8px;
+}
+.email {
+  	position: absolute;
+  	height: 62.44%;
+  	width: 8.4%;
+  	top: 0%;
+  	left: 0%;
+  	font-weight: 500;
+  	display: inline-block;
+}
+.enter-your-email {
+  	position: absolute;
+  	height: 74.96%;
+  	width: 46.15%;
+  	top: 48.44%;
+  	left: 6.29%;
+  	font-size: 16px;
+  	color: #000842;
+  	display: inline-block;
+}
+.component-child {
+  	position: absolute;
+  	height: 3.05%;
+  	width: 100%;
+  	top: 96.87%;
+  	right: 0%;
+  	bottom: 0.07%;
+  	left: 0%;
+  	background-color: #000842;
+}
+.message-1-icon {
+  	position: absolute;
+  	height: 26.56%;
+  	width: 3.96%;
+  	top: 54.69%;
+  	right: 96.04%;
+  	bottom: 18.75%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.email-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 2.32px;
+  	width: 497.7px;
+  	height: 65.5px;
+}
+.password {
+  	position: absolute;
+  	top: 0px;
+  	left: 2.32px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 74.2px;
+  	height: 20.5px;
+}
+.group-child {
+  	position: absolute;
+  	top: 63.45px;
+  	left: 2.32px;
+  	background-color: #999;
+  	width: 497.7px;
+  	height: 2px;
+}
+.enter-your-password {
+  	position: absolute;
+  	top: 0px;
+  	left: 33.64px;
+  	display: inline-block;
+  	width: 187.9px;
+  	height: 24.6px;
+}
+.padlock-1-icon {
+  	position: absolute;
+  	top: 4.09px;
+  	left: 0px;
+  	width: 19.7px;
+  	height: 17.4px;
+  	overflow: hidden;
+}
+.enter-your-password-parent {
+  	position: absolute;
+  	top: 29.68px;
+  	left: 0px;
+  	width: 221.6px;
+  	height: 24.6px;
+  	font-size: 16px;
+  	color: #000842;
+}
+.invisible-1-icon {
+  	position: absolute;
+  	top: 39.91px;
+  	left: 483.76px;
+  	width: 16.2px;
+  	height: 14.3px;
+  	overflow: hidden;
+}
+.password-parent {
+  	position: absolute;
+  	top: 115.65px;
+  	left: 0px;
+  	width: 500px;
+  	height: 65.5px;
+}
+.component-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 500px;
+  	height: 181.1px;
+}
+.group-item {
+  	position: absolute;
+  	top: 3.07px;
+  	left: 0px;
+  	background-color: #fff;
+  	border: 1px solid #000;
+  	box-sizing: border-box;
+  	width: 17.4px;
+  	height: 15.4px;
+}
+.rememebr-me {
+  	position: absolute;
+  	top: 0px;
+  	left: 29px;
+  	font-weight: 300;
+  	display: inline-block;
+  	width: 104.4px;
+  	height: 18.4px;
+}
+.forgot-password {
+  	position: absolute;
+  	top: 0px;
+  	left: 372.39px;
+  	font-weight: 300;
+  	color: #4d4d4d;
+  	display: inline-block;
+  	width: 125.3px;
+  	height: 36.8px;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 198.55px;
+  	left: 2.32px;
+  	width: 497.7px;
+  	height: 36.8px;
+  	font-size: 12px;
+  	color: #000;
+}
+.group-inner {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  	border-radius: 32px;
+  	background-color: #0c21c1;
+  	width: 497.7px;
+  	height: 54.2px;
+}
+.login {
+  	position: absolute;
+  	top: 14.33px;
+  	left: 222.74px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 53.4px;
+  	height: 26.6px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 278.37px;
+  	left: 2.32px;
+  	width: 497.7px;
+  	height: 54.2px;
+  	font-size: 17px;
+  	color: #fff;
+}
+.group-div {
+  	position: absolute;
+  	top: 177.05px;
+  	left: 0px;
+  	width: 500px;
+  	height: 332.6px;
+  	font-size: 13px;
+  	color: #999;
+}
+.group-container {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 500px;
+  	height: 509.7px;
+}
+.or-continue-with {
+  	position: absolute;
+  	top: 549.58px;
+  	left: 176.33px;
+  	font-size: 16px;
+  	font-weight: 500;
+  	color: #b5b5b5;
+  	display: inline-block;
+  	width: 150.8px;
+  	height: 24.6px;
+}
+.group-icon {
+  	position: absolute;
+  	top: 595px;
+  	left: 228px;
+  	width: 48.1px;
+  	height: 42.4px;
+}
+.group-parent {
+  	position: absolute;
+  	top: 187px;
+  	left: 172px;
+  	width: 500px;
+  	height: 637.4px;
+}
+.login-2 {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 982px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 30px;
+  	color: #000;
+  	font-family: Poppins;
+}
+
