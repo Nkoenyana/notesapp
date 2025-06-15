@@ -8,23 +8,22 @@ export const schema = a.schema({
       description: a.string(),
       image: a.string(),
       tag: a.string().array(),
-      categories: a.string().array(),
-      createdAt: a.timestamp(),
-      updatedAt: a.timestamp(),
-      deletedAt: a.timestamp(),
+      deleted: a.boolean(),
       categoryId: a.id(),
       category: a.belongsTo('Category', 'categoryId'),
       completed: a.boolean(),
       media: a.json(),
+      subtask: a.json(),
+      repeat: a.json(),
+      reminder: a.json(),
+      shared: a.hasMany('NoteShare', 'noteId'),
     })
-    .authorization((allow) => [allow.owner()]),
+    .authorization((allow) => [allow.owner(), allow.guest()]),
     Tag: a.model({
       name: a.string(),
       description: a.string(),
       color: a.string(),
       author: a.string(),
-      createdAt: a.timestamp(),
-      updatedAt: a.timestamp(),
     }).authorization((allow) => [allow.owner()]),
     Category: a.model({
       id: a.id().required(),
@@ -32,8 +31,21 @@ export const schema = a.schema({
       description: a.string(),
       color: a.string(),
       notes: a.hasMany('Note', 'categoryId'),
-    })
-    .authorization((allow) => [allow.guest(), allow.owner()]),
+    }).authorization((allow) => [allow.guest(), allow.owner()]),
+    NoteShare: a.model({
+      id: a.id(),
+      noteId: a.id(),
+      note: a.belongsTo('Note', 'noteId'),
+      sharedWith: a.string().required(),
+      sharedBy: a.string().required(),
+    }).authorization((allow) => [allow.owner()]),
+    User: a.model({
+      id: a.id(),
+      email: a.string(),
+      avatar: a.string(),
+      birthday: a.timestamp(),
+      displayName: a.string()
+    }).authorization((allow) =>  [allow.owner(), allow.guest()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

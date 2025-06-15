@@ -15,6 +15,8 @@ export default defineConfig({
       "~amplify": '/amplify',
       "~assets": '/src/assets',
       "~layouts": '/src/layouts',
+      "~providers": '/src/providers',
+      "~data": '/src/data',
     },
   },
 })

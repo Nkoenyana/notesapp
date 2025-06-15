@@ -1,0 +1,119 @@
+[
+    {
+        "id": "note1",
+        "name": "Note 1",
+        "description": "This is the first note.",
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "tag": [
+            "tag1",
+            "tag2"
+        ],
+        "deleted": true,
+        "categoryId": "cat1",
+        "category": "home",
+        "completed": false,
+        "media": [
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg", 
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
+        ],
+        "attachment": ["https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg", "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"],
+        "subtask": [
+            {
+                "id": "subtask1",
+                "name": "Subtask 1",
+                "completed": false
+            },
+            {
+                "id": "subtask2",
+                "name": "Subtask 2",
+                "completed": true
+            }
+        ],
+        "repeat": {
+            "frequency": "daily",
+            "interval": 1
+        },
+        "reminder": {
+            "startTime": "2023-10-01T10:00:00Z",
+            "endTime": "2023-10-01T11:00:00Z",
+            "timeBefore": 30,
+            "unit": "minutes"
+        },
+        "priority": "normal",
+        "createdAt": "2023-10-01T09:00:00Z",
+        "updatedAt": "2023-10-01T09:30:00Z"
+    },
+    {
+        "id": "note2",
+        "name": "Note 2",
+        "description": "This is the second note.",
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "tag": [
+            "tag3"
+        ],
+        "category": "home",
+        "deleted": false,
+        "completed": true,
+        "media": [
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg", 
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
+        ],
+        "attachment": [
+            {
+                "type": "pdf",
+                "url": "https://example.com/document.pdf"
+            },
+            {
+                "type": "docx",
+                "url": "https://example.com/another-document.docx"
+            }
+        ],
+        "subtask": [],
+        "priority": "high",
+        "createdAt": "2023-10-01T09:00:00Z",
+        "updatedAt": "2023-10-01T09:30:00Z"
+    },
+    {
+        "id": "note3",
+        "name": "Note 3",
+        "description": "This is the third note with no tags.",
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "tag": [],
+        "deleted": false,
+        "categoryId": "cat2",
+        "category":  "work",
+        "attachment": [
+            {
+                "type": "pdf",
+                "url": "https://example.com/document.pdf"
+            },
+            {
+                "type": "docx",
+                "url": "https://example.com/another-document.docx"
+            }
+        ],
+        "completed": false,
+        "media": [
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg", 
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg",
+        "https://static.vecteezy.com/system/resources/thumbnails/051/778/475/small_2x/an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
+        ],
+        "subtask": [],
+        "repeat": {
+            "frequency": "weekly",
+            "interval": 1
+        },
+        "reminder": {
+            "timeBefore": 1,
+            "unit": "hour"
+        },
+        "priority": "medium",
+        "createdAt": "2023-10-01T09:00:00Z",
+        "updatedAt": "2023-10-01T09:30:00Z"
+    }
+]

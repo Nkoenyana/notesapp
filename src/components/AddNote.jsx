@@ -13,7 +13,6 @@ export function AddNote({ client, fetchNotes }) {
       name: form.get("name"),
       description: form.get("description"),
       image: form.get("image").name,
-      createdAt: new Date().toISOString(),
     })
       .then((response) => {
         toast.success("Note created successfully!", {

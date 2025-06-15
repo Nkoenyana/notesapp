@@ -1,13 +1,11 @@
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import Homepage from "~pages/home.jsx";
-import NotFound from "~pages/code/404.jsx";
 import { CustomAuth, formFields  } from "~components/CustomAuth.jsx";
 
 /*
  * @type {import('aws-amplify/data').Client<import('../amplify/data/resource').Schema>}
  */
-import { ReactRouterAppProvider } from '@toolpad/core/react-router';
 import { Outlet } from "react-router";
 import DashBoardIcon from "@mui/icons-material/Dashboard";
 /** @typedef {import("@toolpad/core").Navigation} Navigation */
@@ -18,6 +16,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LogoutIcon from '@mui/icons-material/Logout';
+import TimerIcon from '@mui/icons-material/Timer';
+
+import { AppProvider } from '@toolpad/core/AppProvider';
+import { PageProvider } from '~providers/PageProvider.jsx';
 const NAVIGATION = [
   {
     kind: 'header',
@@ -69,9 +71,9 @@ export default function App() {
         formFields={formFields}
       >
       {({ signOut }) => (
-        <ReactRouterAppProvider navigation={NAVIGATION} branding={BRANDING}>
+        <AppProvider navigation={NAVIGATION} branding={BRANDING}>
           <Outlet />
-        </ReactRouterAppProvider>
+        </AppProvider>
       )}
     </Authenticator>
   );
