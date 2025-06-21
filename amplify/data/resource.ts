@@ -7,8 +7,8 @@ const schema = a.schema({
       title:a.string(),
       content: a.string(),
       image: a.string(),
-      attachments: a.string.array(),
-      tags: a.string.array(),
+      attachments: a.json(),
+      tags: a.string().array(),
       isPinned: a.boolean(),
       color: a.string(),
     })
