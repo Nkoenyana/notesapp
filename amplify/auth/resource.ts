@@ -7,15 +7,10 @@ export const auth = defineAuth({
       google: {
         clientId: secret('gg_id'),
         clientSecret: secret('gg_client'),
-<<<<<<< HEAD
         attributeMapping: {
           email: 'email'
         },
         scopes: ['email']
-=======
-                
-       
->>>>>>> parent of 4c10359 (up UI_2)
       },
       callbackUrls: [
         'http://localhost:5173',
