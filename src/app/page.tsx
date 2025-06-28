@@ -9,9 +9,20 @@ import NoteEditorDialog from '@/components/NoteEditorDialog';
 import ShareNoteDialog from '@/components/ShareNoteDialog';
 import { useToast } from "@/hooks/use-toast";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-
+import {Authenticator } from "@aws-amplify/ui-react"; // Import Authenticator for authentication
+import "@aws-amplify/ui-react/styles.css";
+// authentication 
+import { generateClient } from "aws-amplify/data"; // Import Data client generator
+import amplifyJson from "amplify-json"; // Import your Amplify configuration
+import type { Schema } from "@/amplify/data/resource"; // Import your schema type
+import { Amplify } from "aws-amplify"; // Import AmplifyJson for configuration
 const NOTES_PER_PAGE = 9; // Number of notes to load per scroll
 const SCROLL_THRESHOLD = 200; // Pixels from bottom to trigger load
+
+Amplify.configure(amplifyJson); // Configure Amplify with your JSON config
+const client = generateClient({
+  authMode: 'userPool', // Use user pool for authentication
+})
 
 // Expanded sample initial notes for demonstration and lazy loading testing
 const initialNotes: Note[] = [
@@ -246,8 +257,17 @@ const initialNotes: Note[] = [
   },
 ];
 
+export default function AppWithAuth(){
+  return (
+    <Authenticator>
+      {({user, signOut}) => (
+        <Home user={user} signOut={signOut} />
+      )}
+    </Authenticator>
+  );
+}
 
-export default function Home() {
+export function Home({user, signOut}) {
   const [notes, setNotes] = useState<Note[]>([]);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
   const [noteToEdit, setNoteToEdit] = useState<Note | null>(null);

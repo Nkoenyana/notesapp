@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-
 export const metadata: Metadata = {
   title: 'NoteLink App',
   description: 'Create, share, and manage your notes with ease.',
