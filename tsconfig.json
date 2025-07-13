@@ -20,8 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "amplify/*": ["./amplify/*"],
-      "amplify-json": ["./amplify_outputs.json"]
+      "amplifyJson": ["./amplify_outputs.json"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

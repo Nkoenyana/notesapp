@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Page Component",
+    "content": "This file contains the main page component for the note-taking app, including authentication and note management features.",
+    "attachments": [],
+    "tags": ["page", "component", "authentication"],
+    "color": "#f0f0f0",
+    "deletedAt": null
+  },
+  {
+    "title": "Header Component",
+    "content": "This file defines the header component of the app, including user profile and note creation functionalities.",
+    "attachments": [
+      {
+        "id": "header-component",
+        "name": "Header.tsx",
+        "type": "image/jpeg",
+        "url": "https://www.shutterstock.com/image-photo/cute-cat-tilting-head-baby-600nw-2492403467.jpg",
+        "isImage": true
+      },
+      {
+        "id": "header-component",
+        "name": "test.tsx",
+        "type": "image/png",
+        "url": "https://www.shutterstock.com/image-photo/cute-cat-tilting-head-baby-600nw-2492403467.jpg",
+        "isImage": true
+      }
+      ],
+    "tags": ["header", "component", "user profile"],
+    "color": "#e0e0e0",
+    "deletedAt": null
+  },
+  {
+    "title": "Header Component",
+    "content": "This file defines the header component of the app, including user profile and note creation functionalities.",
+    "attachments":{
+        "id": "header-component",
+        "name": "Header.tsx",
+        "type": "image/jpeg",
+        "url": "https://www.shutterstock.com/image-photo/cute-cat-tilting-head-baby-600nw-2492403467.jpg",
+        "isImage": true,
+        "file": null
+      },
+    "tags": ["header", "component", "user profile"],
+    "color": "#e0e0e0"
+  }
+]
