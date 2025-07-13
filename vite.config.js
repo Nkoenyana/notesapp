@@ -13,6 +13,10 @@ export default defineConfig({
       'amplify-json': '/amplify_outputs.json',
       "~utils": '/src/utils',
       "~amplify": '/amplify',
+      "~assets": '/src/assets',
+      "~layouts": '/src/layouts',
+      "~providers": '/src/providers',
+      "~data": '/src/data',
     },
   },
 })
