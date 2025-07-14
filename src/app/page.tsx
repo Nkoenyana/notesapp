@@ -32,7 +32,7 @@ export default function AppWithAuth(){
   );
 }
 
-export function Home() {
+export function Home({ user, signOut }) {
   const [notes, setNotes] = useState<Note[]>([]);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
   const [noteToEdit, setNoteToEdit] = useState<Note | null>(null);
@@ -183,6 +183,8 @@ export function Home() {
         onAddNote={handleAddNote}
         searchTerm={searchTerm}
         onSearchChange={setSearchTerm}
+        signOut={signOut}
+        user={user}
       />
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8">
         <NoteList
