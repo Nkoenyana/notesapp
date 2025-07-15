@@ -13,6 +13,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import { Amplify } from 'aws-amplify';
 import amplifyJson from 'amplifyJson'
 import {generateClient} from "aws-amplify/data"; // Import Data client generator
+import {signInWithRedirect} from "@aws-amplify/auth";
 import "@aws-amplify/ui-react/styles.css";
 const NOTES_PER_PAGE = 9;
 const SCROLL_THRESHOLD = 200;
@@ -22,9 +23,10 @@ const client = generateClient({
   authMode: 'userPool', // Use user pool for authentication
 });
 
+
 export default function AppWithAuth(){
   return (
-    <Authenticator>
+    <Authenticator socialProviders={['google']}>
       {({user, signOut}) => (
         <Home user={user} signOut={signOut} />
       )}
